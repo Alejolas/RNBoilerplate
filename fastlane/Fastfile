@@ -1,0 +1,15 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Build the app without signing"
+  lane :build do
+    scan(scheme: "Reactish", workspace: './ios/Reactish.xcworkspace', build_for_testing: true)
+  end
+end
+
+platform :android do
+  desc "Build the app"
+  lane :build do
+    gradle(task: "clean assembleRelease", project_dir: 'android/')
+  end
+end
