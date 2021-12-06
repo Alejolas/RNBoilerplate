@@ -1,21 +1,22 @@
 import { useNavigation } from '@react-navigation/native';
-import React, { FC } from 'react';
-import { Button, SafeAreaView, Text } from 'react-native';
+import React from 'react';
+import { Button, View } from 'react-native';
+import style from './style';
 import routes from '../../navigation/routes';
+import { LoggedOutStackNavigationProp } from '../../navigation/types';
 
-const OnBoardingScreen: FC = () => {
-  const navigation = useNavigation();
-
+const OnBoarding = () => {
+  const navigation =
+    useNavigation<LoggedOutStackNavigationProp<'ON_BOARDING'>>();
   const navigateToLogin = () => {
     navigation.navigate(routes.LOGIN);
   };
 
   return (
-    <SafeAreaView
-      style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>On Boarding Screen</Text>
+    <View style={style.container}>
       <Button title="Navigate to Login Screen" onPress={navigateToLogin} />
-    </SafeAreaView>
+    </View>
   );
 };
-export default OnBoardingScreen;
+
+export default OnBoarding;

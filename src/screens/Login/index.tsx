@@ -1,12 +1,13 @@
 import React, { FC } from 'react';
-import { SafeAreaView, Text } from 'react-native';
+import { Text, View } from 'react-native';
+import style from './style';
 
-const LoginScreen: FC = () => {
+const Login: FC = () => {
   return (
-    <SafeAreaView
-      style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Login Screen</Text>
-    </SafeAreaView>
+    <View style={style.container}>
+      <Text>Login example screen</Text>
+    </View>
   );
 };
-export default LoginScreen;
+
+export default Login;
