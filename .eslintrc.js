@@ -1,13 +1,23 @@
 module.exports = {
-  root: true,
+  env: {
+    es6: true,
+    node: true,
+    jest: true,
+  },
   extends: [
-    '@react-native-community',
-    'airbnb-typescript',
-    'airbnb/hooks',
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:jest/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+  ],
+  plugins: [
+    'react',
+    'react-native', 
+    'react-hooks', 
+    '@typescript-eslint',
     'prettier',
-    'plugin:prettier/recommended',
   ],
   rules: {
     'consistent-return': 0,
@@ -24,12 +34,14 @@ module.exports = {
     'react/prop-types': 0,
     'react/jsx-props-no-spreading': 0,
     'import/prefer-default-export': 0,
+    'prettier/prettier': 'error',
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
   },
   parserOptions: {
-    tsconfigRootDir: __dirname,
-    project: [
-      './tsconfig.json',
-      './tsconfig.eslint.json',
-    ],
+    project: './tsconfig.json',
   },
 };
