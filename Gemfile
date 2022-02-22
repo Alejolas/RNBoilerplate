@@ -1,5 +1,5 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem 'cocoapods'
+gem 'cocoapods', '~> 1.11', '>= 1.11.2'
 gem 'cocoapods-keys'
 gem "fastlane"

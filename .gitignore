@@ -65,6 +65,9 @@ fastlane/test_output
 # CocoaPods
 /ios/Pods/
 
+# Ruby Gems (Bundler)
+/vendor
+/template/vendor
 
 # Jest
 coverage/*
