@@ -1,5 +1,5 @@
 import routes from './routes';
-import type { StackNavigationProp } from '@react-navigation/stack';
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 export type LoggedOutStackParamList = {
   [routes.ON_BOARDING]: undefined;
@@ -8,4 +8,4 @@ export type LoggedOutStackParamList = {
 
 export type LoggedOutStackNavigationProp<
   T extends keyof LoggedOutStackParamList,
-> = StackNavigationProp<LoggedOutStackParamList, T>;
+> = NativeStackNavigationProp<LoggedOutStackParamList, T>;

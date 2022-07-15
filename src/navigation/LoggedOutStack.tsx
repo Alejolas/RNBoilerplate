@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import OnBoardingScreen from '../screens/OnBoarding';
 import LoginScreen from '../screens/Login';
 import routes from './routes';
 import { LoggedOutStackParamList } from './types';
 
-const Stack = createStackNavigator<LoggedOutStackParamList>();
+const Stack = createNativeStackNavigator<LoggedOutStackParamList>();
 
 const LoggedOutStack: FC = () => (
   <Stack.Navigator>
